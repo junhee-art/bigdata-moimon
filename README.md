@@ -5,12 +5,11 @@
 ## 실행 (Windows PowerShell, Python 3.10 이상)
 
 ```powershell
-py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-브라우저가 열리지 않으면 터미널에 표시된 로컬 주소를 입력하고, 종료는 Ctrl+C입니다.
+브라우저가 열리지 않으면 터미널에 표시된 로컬 주소를 입력(또는 Ctrl + 링크 클릭)하고, 종료는 Ctrl+C입니다.
 
 ## 구성
 
@@ -21,7 +20,7 @@ py -m venv .venv
 | `chatbot.py` | Ollama 챗봇 (관련 동아리 검색 · 프롬프트 · 스트리밍) |
 | `data/` | 옥천 평생학습 동아리 시간표 csv(https://www.data.go.kr/data/15147030/fileData.do)|
 
-(링크의 파일 다운로드 하고, 'data'폴더 생성 후 폴더에 csv 파일 넣으세요.)
+(링크의 파일 설치 후, 설치한 파일에 있는 곳에 'data'폴더 생성 및 폴더에 csv 파일 넣으세요.)
 
 앱은 pandas/pyarrow를 쓰지 않습니다(보안 정책으로 해당 DLL이 막힌 PC에서도 실행되도록). 그래서 표는 HTML, 차트는 글자 막대로 그립니다.
 
@@ -40,7 +39,7 @@ py -m venv .venv
 ollama pull exaone3.5:7.8b
 ```
 
-- 질문과 관련된 동아리 몇 개만 골라 프롬프트에 넣고, 목록에 있는 내용만 답하도록 지시합니다. 답변 아래에 참고한 동아리를 표시합니다.
+- 질문과 관련된 내용은 챗봇 예제에 넣었으며, 목록에 있는 내용만 답하도록 지시했습니다. 답변 아래에 참고한 동아리를 표시합니다.
 - 연락처·장소·모집·현재 활동 여부처럼 CSV에 없는 정보나 동아리와 무관한 질문은 모델을 거치지 않고 바로 안내합니다.
-- 서버 주소와 모델은 환경 변수 `OLLAMA_HOST`, `OLLAMA_MODEL`로 바꿀 수 있습니다(기본 `exaone3.5:7.8b`). 첫 질문은 모델 로딩 때문에 오래 걸릴 수 있습니다(최대 5분 대기).
-- 작은 모델이라 목록 일부만 말하거나 표현이 어색할 수 있습니다. 일정은 원문을 확인하세요. 컴퓨터가 느리면 `exaone3.5:2.4b`로 바꿔 보세요. 모델 라이선스(EXAONE AI Model License, 비상업적 이용)는 사용 전에 확인하세요.
+- 서버 주소와 모델은 환경 변수 `OLLAMA_HOST`, `OLLAMA_MODEL`로 바꿀 수 있습니다(기본 `exaone3.5:7.8b`). 첫 질문은 모델 로딩 때문에 오래 걸릴 수 있습니다.
+- 작은 모델이라 목록 일부만 말하거나 표현이 어색할 수 있습니다. 일정은 원문을 확인하세요. 컴퓨터 사양이 낮을 경우 `exaone3.5:2.4b`로 바꿔 보세요. 
