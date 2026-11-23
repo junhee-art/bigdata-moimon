@@ -19,7 +19,7 @@ py -m venv .venv
 | `app.py` | Streamlit 화면 (동아리 찾기 · 일정 탐색 · 데이터 점검) |
 | `schedule_parser.py` | 모임주기·시간 규칙 기반 파서 (순수 파이썬) |
 | `chatbot.py` | Ollama 챗봇 (관련 동아리 검색 · 프롬프트 · 스트리밍) |
-| `data/` | 제공된 원본 CSV 사본 (화면 상단 "데이터 파일 바꾸기"에서 다른 CSV로 교체 가능) |
+| `data/` | 옥천 평생학습 동아리 시간표 csv(추가 예정)|
 
 앱은 pandas/pyarrow를 쓰지 않습니다(보안 정책으로 해당 DLL이 막힌 PC에서도 실행되도록). 그래서 표는 HTML, 차트는 글자 막대로 그립니다.
 
