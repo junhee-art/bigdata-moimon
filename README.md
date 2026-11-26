@@ -36,10 +36,10 @@ python -m venv .venv
 
 ## 챗봇 (Ollama)
 
-화면 오른쪽 아래의 **챗봇** 버튼을 누르면 열립니다. 로컬 [Ollama](https://ollama.com)에서 LG AI연구원의 `exaone3.5:7.8b`(한국어·영어 지원) 모델을 사용합니다.
+화면 오른쪽 아래의 **챗봇** 버튼을 누르면 열립니다. 로컬 [Ollama](https://ollama.com)에서 LG AI연구원의 `exaone3.5:2.4b`(한국어·영어 지원) 모델을 사용합니다.
 
 ```powershell
-ollama pull exaone3.5:7.8b
+ollama pull exaone3.5:2.4b
 ```
 
 > 챗봇을 쓰려면 Ollama가 실행 중이어야 합니다.
@@ -48,7 +48,7 @@ ollama pull exaone3.5:7.8b
 - 연락처·장소·모집 여부·현재 활동 여부처럼 CSV에 없는 정보나 동아리와 관계없는 질문은 모델을 거치지 않고 바로 안내 문구로 답합니다.
 - 서버 주소와 모델은 환경 변수로 바꿀 수 있습니다.
   - `OLLAMA_HOST`: Ollama 서버 주소
-  - `OLLAMA_MODEL`: 사용할 모델 (기본값 `exaone3.5:7.8b`)
+  - `OLLAMA_MODEL`: 사용할 모델 (기본값 `exaone3.5:2.4b`)
 - 첫 질문은 모델을 불러오느라 시간이 걸릴 수 있습니다.
 - 컴퓨터 사양이 낮다면 더 작은 `exaone3.5:2.4b` 모델을 사용해 보세요.
 
